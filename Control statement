@@ -1,0 +1,101 @@
+# 1. What is the result of the following code?
+# 1. 다음 코드의 결과값은 무엇일까?
+# Problem
+a = "Life is too short, you need python"
+if "wife" in a: print("wife")
+elif "python" in a and "you" not in a: print("python")
+elif "shirt" not in a: print("shirt")
+elif "need" in a: print("need")
+else: print("none")
+
+# Answer
+# The "shirt" is printed because the third condition is to be true first.
+# 가장 먼저 참이 되는 것이 세 번째 조건이기 때문에 "shirt"가 출력된다.
+
+# 2. Use the While gate to find the sum of three multiples of the natural water from 1 to 1000.
+# 2. While문을 사용해 1부터 1000까지의 자연수 중 3의 배수의 합을 구해 보자.
+# Answer
+result = 0
+i = 1
+while i <= 1000:
+    if i % 3 == 0:
+        result += i
+    i += 1
+print(result)
+# 166833
+
+# 3. Let's use the While grammar to write a program that displays stars (*) as follows:
+# 3. While문을 사용하여 다음과 같이 별(*)을 표시하는 프로그램을 작성해 보자.
+# Problem
+"""
+*
+**
+***
+****
+*****
+"""
+# Answer
+i = 0
+while True:
+    i += 1
+    if i > 5: break
+    print(i * "*")
+
+# 4. Let's print out numbers from 1 to 100 using the for grammar.
+# 4. for문을 사용해 1부터 100까지의 숫자를 출력해 보자.
+# Problem
+"""
+>>> for i in (      )
+···    print(i)
+···        
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+... Omission ...
+"""
+
+# Answer
+for i in range(1, 101):
+    print(i)
+
+# For i in range (1, 101) is doing 101 instead of 100 because the range function is run more than 1 but less than 101.
+# for i in range(1, 101): 에서 100이 아닌 101을 하는 이유는 range 함수는 1이상 101미만으로 실행되기 때문이다.
+
+# 5. There are 10 students in class A. The students' midterms scores are as follows.
+# 5. A 학급에 총 10명의 학생이 있다. 이 학생들의 중간고사 점수는 다음과 같다.
+
+# [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+
+# Use for grammar to get the average score of class A.
+# for문을 사용하여 A 학급의 평균 점수를 구해 보자.
+
+A = [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+total = 0
+for score in A:
+    total += score
+average = total/len(A)
+print(average)
+
+# 6. There is a code that stores odd numbers only by multiplying by 2.
+# 6. 리스트 중에서 홀수에만 2를 곱하여 저장하는 다음 코드가 있다.
+
+numbers = [1, 2, 3, 4, 5]
+
+result = []
+for n in numbers:
+    if n % 2 == 1:
+        result.append(n*2)
+
+# Let's express the above code using a list comprehension.
+# 위 코드를 리스트 내포를 사용해서 표현해보자.
+
+numbers = [1, 2, 3, 4, 5]
+result = [n * 2 for n in numbers if n % 2 == 1]
+print(result)
