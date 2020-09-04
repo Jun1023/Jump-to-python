@@ -1,67 +1,124 @@
-### Question 1
+# 1. 홍길동 씨의 과목별 점수는 다음과 같다. 홍길동 씨의 평균 점수를 구해 보자.
+# 1. Hong Gil-dong's grades are as follows. Let's get Hong Gil-dong's average score.
+
+=============
+과목 | 점수
+국어 | 80
+영어 | 75
+수학 | 55
+=============
+
 a = 80
 b = 75
 c = 55
 result = (a+b+c)/3
 print(result)
 
-### Question 2
-# answer : 13을 2로 나눈 나머지가 0이라면 짝수이고, 1이라면 홀수이다.
+# Answer : 70.0
+
+# 2. 자연수 13이 홀수인지 짝수인지 판별할 수 있는 방법에 대해 말해 보자.
+# 2. Let's talk about how we can determine whether the natural number 13 is odd or even.
+
+# Answer : 13을 2로 나눈 나머지가 0이라면 짝수이고, 1이라면 홀수이다.
+
 if 13 % 2 == 0:
     print("even number")
 else: 
     print("odd number")
 
-### Question 3
+# 3. 홍길동 씨의 주민등록번호는 881120-1068234이다. 홍길동 씨의 주민등록번호를 연월일(YYYYMMDD) 부분과 그 뒤의 숫자 부분으로 나누어 출력해 보자.
+# 3. Hong Gil-dong's resident registration number is 881120-1068234. Let's print out Hong Gil-dong's resident registration number by dividing it into the "YYYYMMDD" section and the "Number" section.
 pin = "881120-1068234"
 yyyymmdd = pin[:6]
 num = pin[7:]
 print(yyyymmdd)
 print(num)
 
-### Question 4
+# Answer : yyyymmdd : 881120, num : 1068234
+
+# 4. 주민등록번호 뒷자리의 맨 첫 번째 숫자는 성별을 나타낸다. 주민등록번호에서 성별을 나타내는 숫자를 출력해 보자.
+# 4. The first number in the back of the resident registration number indicates gender. Let's print out the number for gender in the resident registration number.
 pin = "881120-1068234"
 print(pin[7])
 
-### Question 5
+# Answer : 1
+
+# 5. 다음과 같은 문자열 a:b:c:d가 있다. 문자열의 replace 함수를 사용하여 a#b#c#d로 바꿔서 출력해 보자.
+# 5. There is a string a:b:c:d. Let's use the place function of the string to change it to a#b#c#d and print it out.
+
 a = "a:b:c:d"
 b = a.replace(":", "#")
 print(b)
 
-### Question 6
+# Answer : a#b#c#d
+
+# 6. [1, 3, 5, 4, 2] 리스트를 [5, 4, 3, 2, 1]로 만들어 보자.
+# 6. [1, 3, 5, 4, 2] Let's make the list [5, 4, 3, 2, 1].
+
 a = [1, 3, 5, 4, 2]
 a.sort()
 a.reverse()
 print(a)
 
-### Question 7
+# Answer : [5, 4, 3, 2, 1]
+
+# 7. ['Life', 'is', 'too', 'short'] 리스트를 Life is too short 문자열로 만들어 출력해 보자.
+# 7. ['Life', 'is', 'too' and 'short'] Let's print out the list by making it a Life is too short string.
+
 a = ['Life', 'is', 'too', 'short']
 result = " ".join(a)
 print(result)
 
-### Question 8
+# Answer : Life is too short
+
+# 8. (1,2,3) 튜플에 값 4를 추가하여 (1,2,3,4)를 만들어 출력해 보자.
+# 8. (1,2,3) Let's add a value of 4 to the tuple to make and print (1,2,3,4).
+
 a = (1, 2, 3)
 a = a + (4,)
 print(a)
 
-### Question 9
-# answer : 정답은 3번인 a[[1]] = 'python'이다. 이유는 dictionary의 키로는 mutable 값을 사용할 수 없기 때문이다.
+# Answer : (1, 2, 3, 4)
+
+# 9. 다음과 같은 딕셔너리 a가 있다.
+# 9. 
+===========
+>>> a = dict()
+>>> a
+{}
+===========
+
+# Answer : 정답은 3번인 a[[1]] = 'python'이다. 이유는 dictionary의 키로는 mutable 값을 사용할 수 없기 때문이다.
 # 키는 immutable값만을 사용할 수 있다. list는 mutable 값이기 때문에 사용할 수 없다.
 
-### Question 10
+# 10. 딕셔너리 a에서 'B'에 해당되는 값을 추출해 보자.
+# 10. Let's extract the value corresponding to 'B' from Dictionary a.
+
 a = {'A':90, 'B':80, 'C':70}
 result = a.pop('B')
 print(a)
 print(result)
 
-### Question 11
+# Answer : {'A': 90, 'C': 70}
+
+# 11. a 리스트에서 중복 숫자를 제거해 보자.
+# 11. A Let's remove duplicate numbers from the list.
+
 a = [1, 1, 1, 2, 2, 3,3, 3, 4, 4, 5]
 aSet = set(a)
 b = list(aSet)
 print(b)
 
-### Question 12
+# Answer : [1, 2, 3, 4, 5]
+
+# 12. 파이썬은 다음처럼 동일한 값에 여러 개의 변수를 선언할 수 있다. 다음과 같이 a, b 변수를 선언한 후 a의 두 번째 요솟값을 변경하면 b 값을 값은 어떻게 될까?
+#     그리고 이런 결과가 나오는 이유에 대해 설명해 보자.
+# 12. Python can declare multiple variables at the same value as follows: What will happen to the value of b after declaring the variable a, b, and then changing the second value of a?
+#     And let's explain why these results come out.
+
 a = b = [1, 2, 3]
 a[1] = 4
 print(b)
-# answer : a와 b는 [1, 2, 3]이라는 동일한 리스트 객체를 가리키고 있기 때문에 똑같이 바뀐다.
+
+# Answer : a와 b는 [1, 2, 3]이라는 동일한 리스트 객체를 가리키고 있기 때문에 똑같이 바뀐다.
+#          A and b change equally because they point to the same list object [1, 2, 3].
